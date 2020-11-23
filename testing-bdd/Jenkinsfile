@@ -1,0 +1,17 @@
+node {
+    
+    stage('SCM Checkout'){
+        
+       
+        git 'https://github.com/Galatenea98/BACKEND_EXP.git'
+    }
+    stage {
+            withMaven(maven : 'MAVEN_3_6_3') {
+                bat'mvn clean compile'
+            }
+        }
+    stage('Compile-Packege'){
+        def mvnHome = tool name: 'MAVEN_3_6_3', type: 'maven'
+        bat "${mvnHome}HB-microservice-master/testing-bdd package"
+    }
+    
