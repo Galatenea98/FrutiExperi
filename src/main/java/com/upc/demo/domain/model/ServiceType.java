@@ -6,23 +6,18 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "users")
-@Getter@Setter
+@Table(name = "services")
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Data@Builder
-public class User extends AuditModel{
-
+@Data
+@Builder
+public class ServiceType extends AuditModel{
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    @Column(unique = true)
-    private String email;
-
-    @NotNull
-    private String password;
-
-
+    private String name;
 }

@@ -40,7 +40,6 @@ public class UsersController {
         return new PageImpl<>(resources, pageable, resources.size());
     }
 
-
     private User convertToEntity(SaveUserResource resource) {
         return mapper.map(resource, User.class);
     }
