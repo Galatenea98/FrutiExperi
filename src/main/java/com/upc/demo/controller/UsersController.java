@@ -2,8 +2,8 @@ package com.upc.demo.controller;
 
 import com.upc.demo.domain.model.User;
 import com.upc.demo.domain.service.UserService;
-import com.upc.demo.resource.SaveUserResource;
 import com.upc.demo.resource.UserResource;
+import com.upc.demo.resource.saving.SaveUserResource;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

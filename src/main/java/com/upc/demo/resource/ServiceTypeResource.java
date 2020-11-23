@@ -6,16 +6,13 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+@Getter
+@Setter
 
-@Getter@Setter
-
-public class UserResource extends AuditModel {
+public class ServiceTypeResource extends AuditModel {
 
     private Long id;
 
-    private String email;
 
-    private String password;
-
-
+    private String name;
 }
