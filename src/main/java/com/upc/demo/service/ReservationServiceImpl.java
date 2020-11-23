@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-class ReservationImpl implements ReservationService {
+class ReservationServiceImpl implements ReservationService {
     @Autowired
     private ReservationRepository reservationRepository;
     @Autowired
