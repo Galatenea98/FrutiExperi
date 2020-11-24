@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MembershipTypeImpl implements MembershipTypeService {
     @Autowired
@@ -42,7 +44,7 @@ public class MembershipTypeImpl implements MembershipTypeService {
     }
 
     @Override
-    public Page<MembershipType> getAllMembershipTypes(Pageable pageable) {
-        return membershipTypeRepository.findAll(pageable);
+    public List<MembershipType> getAllMembershipTypes() {
+        return membershipTypeRepository.findAll();
     }
 }

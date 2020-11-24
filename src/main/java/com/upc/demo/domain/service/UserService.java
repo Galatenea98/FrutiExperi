@@ -5,10 +5,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 public interface UserService {
     User createUser(User user);
     User getUserById(Long id);
-    Page<User> getAllUsers(Pageable pageable);
+    List<User> getAllUsers();
     User updateUser(Long userId, User userRequest);
     ResponseEntity<?> deleteUserById(Long id);
 }
