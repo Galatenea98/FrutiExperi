@@ -227,8 +227,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/upc/demo/resource/saving" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -270,6 +270,8 @@
       <workItem from="1606235726295" duration="2510000" />
       <workItem from="1606239392034" duration="619000" />
       <workItem from="1606240071108" duration="83000" />
+      <workItem from="1606240177867" duration="845000" />
+      <workItem from="1606241062677" duration="344000" />
     </task>
     <servers />
   </component>
@@ -324,6 +326,10 @@
       <screen x="0" y="0" width="1876" height="1080" />
     </state>
     <state x="668" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1876.1080@0.0.1876.1080" timestamp="1606154069040" />
+    <state x="1014" y="383" key="FileChooserDialogImpl" timestamp="1606241019323">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1014" y="383" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1606241019323" />
     <state width="1837" height="413" key="GridCell.Tab.0.bottom" timestamp="1606232340503">
       <screen x="0" y="0" width="1880" height="1080" />
     </state>
@@ -360,12 +366,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="490" y="195" key="Maven.ArtifactSearchDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1606240011483" />
-    <state x="699" y="203" key="SettingsEditor" timestamp="1606231442780">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state x="714" y="203" key="SettingsEditor" timestamp="1606241021809">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="699" y="203" key="SettingsEditor/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606231442780" />
     <state x="698" y="203" key="SettingsEditor/0.0.1876.1080@0.0.1876.1080" timestamp="1606158841406" />
     <state x="714" y="195" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606145666869" />
+    <state x="714" y="203" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1606241021809" />
     <state x="1145" y="372" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1606153409143">
       <screen x="0" y="0" width="1876" height="1080" />
     </state>

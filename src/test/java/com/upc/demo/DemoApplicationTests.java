@@ -46,8 +46,9 @@ class DemoApplicationTests {
         }
         @Test
         void TestComprarMembership () {
-            /*Membership  Expected = MSI.createMembership((long) 1,membresia);
-            Assertions.assertSame(Expected,membresia);*/
+            Long exp = (long)1;
+            Membership  Expected = MSI.createMembership(exp,membresia);
+            Assertions.assertSame(Expected,membresia);
         }
         @Test
         @Disabled
@@ -71,7 +72,7 @@ class DemoApplicationTests {
             } finally {
                 Assert.isTrue(true,"Eliminacion Correcta");
             }
-            ;*/
+            ; */
          }
 
         @Test
@@ -83,7 +84,8 @@ class DemoApplicationTests {
         }
         @Test
          void TestNuevaReservation() {
-            //Assertions.assertSame(RSI.createReservation((long) 1,reserva );
+            Reservation Expeted = RSI.createReservation((long) 1,reserva );
+            Assertions.assertSame(Expeted, reserva);
         }
 
         @Test
@@ -98,8 +100,8 @@ class DemoApplicationTests {
         @Test
         void ReservationTestFindbyID()
         {
-            //Optional<Reservation> Expected = RSI.getAllReservationsByServiceId((long) 1);
-            //Assertions.assertSame(Expected.get(),reserva);
+            List<Reservation> Expected = RSI.getAllReservationsByServiceId((long) 1);
+            Assertions.assertSame(Expected.size(),0);
         }
 
     }
