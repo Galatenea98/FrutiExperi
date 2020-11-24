@@ -26,13 +26,13 @@ public class ProviderController {
     private ProviderService providerService;
 
     @GetMapping("/providers")
-    public Page<ProviderResource> getAllProviders(
+    public List<ProviderResource> getAllProviders(
             @Parameter(description="Pageable Parameter")
                     Pageable pageable) {
         Page<Provider> providersPage = providerService.getAllProviders(pageable);
         List<ProviderResource> resources = providersPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
 
-        return new PageImpl<>(resources, pageable, resources.size());
+        return resources;
     }
 
     @GetMapping("/providers/{id}")

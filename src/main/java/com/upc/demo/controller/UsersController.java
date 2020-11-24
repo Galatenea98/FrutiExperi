@@ -31,13 +31,13 @@ public class UsersController {
     private UserService userService;
 
     @GetMapping("/users")
-    public Page<UserResource> getAllUsers(Pageable pageable){
+    public List<UserResource> getAllUsers(Pageable pageable){
         Page<User> usersPage = userService.getAllUsers(pageable);
         List<UserResource> resources = usersPage.getContent()
                 .stream()
                 .map(this::convertToResource)
                 .collect(Collectors.toList());
-        return new PageImpl<>(resources, pageable, resources.size());
+        return resources;
     }
 
     private User convertToEntity(SaveUserResource resource) {

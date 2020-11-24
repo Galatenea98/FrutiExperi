@@ -25,12 +25,12 @@ public class MembershipController {
     private MembershipService membershipService;
 
     @GetMapping("/posts/{postId}/memberships")
-    public Page<MembershipResource> getAllMembershipsByProviderId(
+    public List<MembershipResource> getAllMembershipsByProviderId(
             @PathVariable(name = "postId") Long postId,
             Pageable pageable) {
         Page<Membership> membershipPage = membershipService.getAllMembershipsByProviderId(postId, pageable);
         List<MembershipResource> resources = membershipPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-        return new PageImpl<>(resources, pageable, resources.size());
+        return resources;
     }
 
     @GetMapping("/posts/{postId}/memberships/{membershipId}")
