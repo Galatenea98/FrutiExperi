@@ -1,13 +1,7 @@
 package com.upc.demo;
 
-import com.upc.demo.domain.model.Card;
-import com.upc.demo.domain.model.Client;
-import com.upc.demo.domain.model.Membership;
-import com.upc.demo.domain.model.Reservation;
-import com.upc.demo.service.CardServiceImpl;
-import com.upc.demo.service.ReservationServiceImpl;
-import com.upc.demo.service.ClientServiceImpl;
-import com.upc.demo.service.MembershipServiceImpl;
+import com.upc.demo.domain.model.*;
+import com.upc.demo.service.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -24,8 +18,8 @@ class DemoApplicationTests {
         ClientServiceImpl CSI = new ClientServiceImpl();
         Membership membresia = new Membership ();
         MembershipServiceImpl MSI = new MembershipServiceImpl();
-        //PagoMembership  pagomembresia = new PagoMembership ();
-        //PagoMembership ServiceImpl PMSI = new PagoMembership ServiceImpl();
+        MembershipPayment pagomembresia = new MembershipPayment();
+        MembershipPaymentServiceImpl PMSI = new MembershipPaymentServiceImpl();
         Card tarjeta = new Card();
         CardServiceImpl TSI  = new CardServiceImpl();
         Reservation reserva = new Reservation();
@@ -52,15 +46,15 @@ class DemoApplicationTests {
         }
         @Test
         @Disabled
-        void TestIngresarPagoMembership ()
+        void TestIngresarMembershipPayment()
         {
-            //PagoMembership  Expected = PMSI.save(pagomembresia);
-            //Assertions.assertSame(Expected,pagomembresia);
+            MembershipPayment Expected = PMSI.createMembershipPayment((long)1,(long)1,pagomembresia);
+            Assertions.assertSame(Expected,pagomembresia);
         }
         @Test
         @Disabled
         void TestAgregarCard(){
-           // Card Expected = TSI.((long) 1,tarjeta);
+            //Card Expected = TSI.save((long) 1,tarjeta);
             //Assertions.assertSame(Expected, tarjeta);
         }
         @Test
@@ -79,8 +73,8 @@ class DemoApplicationTests {
         @Disabled
         void TestListarCards()
         {
-            //List<Card> Expected = TSI.getAll();
-            //Assertions.assertSame(Expected, TSI.getAll());
+            List<Card> Expected = TSI.getAll();
+            Assertions.assertSame(Expected, TSI.getAll());
         }
         @Test
          void TestNuevaReservation() {
