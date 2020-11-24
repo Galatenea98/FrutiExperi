@@ -5,7 +5,6 @@ import com.upc.demo.domain.repository.ReservationRepository;
 import com.upc.demo.domain.repository.ServiceRepository;
 import com.upc.demo.domain.service.ReservationService;
 import com.upc.demo.exception.ResourceNotFoundException;
-import com.upc.demo.resource.ReservationResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-class ReservationServiceImpl implements ReservationService {
+public class ReservationServiceImpl implements ReservationService {
     @Autowired
     private ReservationRepository reservationRepository;
     @Autowired
