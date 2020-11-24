@@ -26,11 +26,9 @@ public class MembershipController {
 
     @GetMapping("/posts/{postId}/memberships")
     public List<MembershipResource> getAllMembershipsByProviderId(
-            @PathVariable(name = "postId") Long postId,
-            Pageable pageable) {
-        Page<Membership> membershipPage = membershipService.getAllMembershipsByProviderId(postId, pageable);
-        List<MembershipResource> resources = membershipPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-        return resources;
+            @PathVariable(name = "postId") Long postId) {
+        return membershipService.getAllMembershipsByProviderId(postId).stream().map(this::convertToResource).collect(Collectors.toList());
+
     }
 
     @GetMapping("/posts/{postId}/memberships/{membershipId}")

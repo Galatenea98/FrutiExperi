@@ -12,6 +12,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ReservationServiceImpl implements ReservationService {
     @Autowired
@@ -20,8 +22,8 @@ public class ReservationServiceImpl implements ReservationService {
     private ServiceRepository serviceRepository;
 
     @Override
-    public Page<Reservation> getAllReservationsByServiceId(Long serviceId, Pageable pageable) {
-        return reservationRepository.findByServiceId(serviceId, pageable);
+    public List<Reservation> getAllReservationsByServiceId(Long serviceId) {
+        return reservationRepository.findByServiceId(serviceId);
     }
 
     @Override

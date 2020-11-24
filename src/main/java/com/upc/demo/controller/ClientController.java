@@ -28,13 +28,9 @@ public class ClientController {
     private ClientService clientService;
 
     @GetMapping("/clients")
-    public List<ClientResource> getAllClients(
-            @Parameter(description="Pageable Parameter")
-                    Pageable pageable) {
-        Page<Client> clientsPage = clientService.getAllClients(pageable);
-        List<ClientResource> resources = clientsPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-
-        return resources;
+    public List<ClientResource> getAllClients()
+    {
+        return clientService.getAllClients().stream().map(this::convertToResource).collect(Collectors.toList());
     }
 
     @GetMapping("/clients/{id}")

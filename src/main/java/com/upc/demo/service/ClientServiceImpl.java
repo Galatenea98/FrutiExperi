@@ -5,10 +5,10 @@ import com.upc.demo.domain.repository.ClientRepository;
 import com.upc.demo.domain.service.ClientService;
 import com.upc.demo.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ClientServiceImpl  implements ClientService {
@@ -42,7 +42,7 @@ public class ClientServiceImpl  implements ClientService {
     }
 
     @Override
-    public Page<Client> getAllClients(Pageable pageable) {
-        return clientRepository.findAll(pageable);
+    public List<Client> getAllClients() {
+        return clientRepository.findAll();
     }
 }

@@ -7,9 +7,6 @@ import com.upc.demo.resource.saving.SaveServiceResource;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,13 +24,8 @@ public class ServiceController {
     private ServiceService serviceService;
 
     @GetMapping("/services")
-    public List<ServiceResource> getAllServices(
-            @Parameter(description="Pageable Parameter")
-                    Pageable pageable) {
-        Page<Service> servicesPage = serviceService.getAllServices(pageable);
-        List<ServiceResource> resources = servicesPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-
-        return resources;
+    public List<ServiceResource> getAllServices() {
+        return serviceService.getAllServices().stream().map(this::convertToResource).collect(Collectors.toList());
     }
 
     @GetMapping("/services/{id}")

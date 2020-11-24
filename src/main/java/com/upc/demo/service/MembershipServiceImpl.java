@@ -11,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MembershipServiceImpl implements MembershipService {
     @Autowired
@@ -19,8 +21,8 @@ public class MembershipServiceImpl implements MembershipService {
     private ProviderRepository providerRepository;
 
     @Override
-    public Page<Membership> getAllMembershipsByProviderId(Long providerId, Pageable pageable) {
-        return membershipRepository.findByProviderId(providerId, pageable);
+    public List<Membership> getAllMembershipsByProviderId(Long providerId) {
+        return membershipRepository.findByProviderId(providerId);
     }
 
     @Override
