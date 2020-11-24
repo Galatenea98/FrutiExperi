@@ -40,7 +40,7 @@ class DemoApplicationTests {
 
         @Test
         @Disabled
-        void TestFindAll() {
+        void ClientTestFindAll() {
             List<Client> Expected = CSI.getAllClients();
             Assertions.assertEquals(Expected.size(), 0);
         }
@@ -88,7 +88,7 @@ class DemoApplicationTests {
 
         @Test
         @Disabled
-        void TestFindAll()
+        void ReservationTestFindAll()
         {
 
             //List<Reservation>Actual = RSI.getAll();
@@ -96,7 +96,7 @@ class DemoApplicationTests {
         }
 
         @Test
-        void TestFindbyID()
+        void ReservationTestFindbyID()
         {
             //Optional<Reservation> Expected = RSI.getAllReservationsByServiceId((long) 1);
             //Assertions.assertSame(Expected.get(),reserva);
