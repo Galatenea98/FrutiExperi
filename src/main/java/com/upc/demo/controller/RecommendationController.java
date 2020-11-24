@@ -25,12 +25,12 @@ public class RecommendationController {
     private RecommendationService recommendationService;
 
     @GetMapping("/services/{serviceId}/recommendations")
-    public Page<RecommendationResource> getAllRecommendationsByServiceId(
+    public List<RecommendationResource> getAllRecommendationsByServiceId(
             @PathVariable(name = "serviceId") Long serviceId,
             Pageable pageable) {
         Page<Recommendation> recommendationPage = recommendationService.getAllRecommendationsByServiceId(serviceId, pageable);
         List<RecommendationResource> resources = recommendationPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-        return new PageImpl<>(resources, pageable, resources.size());
+        return resources;
     }
 
     @GetMapping("/services/{serviceId}/recommendations/{recommendationId}")

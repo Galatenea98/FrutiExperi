@@ -27,13 +27,13 @@ public class ServiceController {
     private ServiceService serviceService;
 
     @GetMapping("/services")
-    public Page<ServiceResource> getAllServices(
+    public List<ServiceResource> getAllServices(
             @Parameter(description="Pageable Parameter")
                     Pageable pageable) {
         Page<Service> servicesPage = serviceService.getAllServices(pageable);
         List<ServiceResource> resources = servicesPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
 
-        return new PageImpl<>(resources, pageable, resources.size());
+        return resources;
     }
 
     @GetMapping("/services/{id}")
