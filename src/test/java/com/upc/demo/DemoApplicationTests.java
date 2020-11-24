@@ -53,8 +53,8 @@ class DemoApplicationTests {
         @Disabled
         void TestIngresarPagoMembership ()
         {
-            PagoMembership  Expected = PMSI.save(pagomembresia);
-            Assertions.assertSame(Expected,pagomembresia);
+            //PagoMembership  Expected = PMSI.save(pagomembresia);
+            //Assertions.assertSame(Expected,pagomembresia);
         }
         @Test
         @Disabled
@@ -67,7 +67,7 @@ class DemoApplicationTests {
         void TestEliminarCard()
         {
             try {
-                TSI.deleteById((long) 1);
+                TSI.DeleteByID((long) 1);
             } finally {
                 Assert.isTrue(true,"Eliminacion Correcta");
             }
