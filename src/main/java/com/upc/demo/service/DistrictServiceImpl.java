@@ -7,6 +7,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DistrictServiceImpl implements DistrictService {
     @Override
@@ -30,7 +32,7 @@ public class DistrictServiceImpl implements DistrictService {
     }
 
     @Override
-    public Page<District> getAllDistricts(Pageable pageable) {
+    public List<District> getAllDistricts() {
         return null;
     }
 }

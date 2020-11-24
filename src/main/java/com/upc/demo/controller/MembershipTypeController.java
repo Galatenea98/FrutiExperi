@@ -27,13 +27,9 @@ public class MembershipTypeController {
     private MembershipTypeService membershipTypeService;
 
     @GetMapping("/membershipTypes")
-    public List<MembershipTypeResource> getAllMembershipTypes(
-            @Parameter(description="Pageable Parameter")
-                    Pageable pageable) {
-        Page<MembershipType> membershipTypesPage = membershipTypeService.getAllMembershipTypes(pageable);
-        List<MembershipTypeResource> resources = membershipTypesPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
+    public List<MembershipTypeResource> getAllMembershipTypes( ){
 
-        return resources;
+        return membershipTypeService.getAllMembershipTypes().stream().map(this::convertToResource).collect(Collectors.toList());
     }
 
     @GetMapping("/membershipTypes/{id}")

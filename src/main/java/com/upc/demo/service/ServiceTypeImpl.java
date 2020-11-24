@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ServiceTypeImpl implements ServiceTypeService {
     @Autowired
@@ -42,7 +44,7 @@ public class ServiceTypeImpl implements ServiceTypeService {
     }
 
     @Override
-    public Page<ServiceType> getAllServiceTypes(Pageable pageable) {
-        return serviceTypeRepository.findAll(pageable);
+    public List<ServiceType> getAllServiceTypes() {
+        return serviceTypeRepository.findAll();
     }
 }

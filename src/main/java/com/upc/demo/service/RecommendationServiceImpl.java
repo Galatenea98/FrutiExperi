@@ -11,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RecommendationServiceImpl implements RecommendationService {
     @Autowired
@@ -19,8 +21,8 @@ public class RecommendationServiceImpl implements RecommendationService {
     private ServiceRepository serviceRepository;
 
     @Override
-    public Page<Recommendation> getAllRecommendationsByServiceId(Long serviceId, Pageable pageable) {
-        return recommendationRepository.findByServiceId(serviceId, pageable);
+    public List<Recommendation> getAllRecommendationsByServiceId(Long serviceId) {
+        return recommendationRepository.findByServiceId(serviceId);
     }
 
     @Override
