@@ -27,13 +27,8 @@ public class DistrictController {
     private DistrictService districtService;
     
     @GetMapping("/districts")
-    public Page<DistrictResource> getAllDistricts(
-            @Parameter(description="Pageable Parameter")
-                    Pageable pageable) {
-        Page<District> districtsPage = districtService.getAllDistricts(pageable);
-        List<DistrictResource> resources = districtsPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-
-        return new PageImpl<>(resources, pageable, resources.size());
+    public List<DistrictResource> getAllDistricts(){
+        return districtService.getAllDistricts().stream().map(this::convertToResource).collect(Collectors.toList());
     }
 
     @GetMapping("/districts/{id}")

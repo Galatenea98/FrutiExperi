@@ -6,9 +6,7 @@ import com.upc.demo.resource.MembershipResource;
 import com.upc.demo.resource.saving.SaveMembershipResource;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,12 +23,10 @@ public class MembershipController {
     private MembershipService membershipService;
 
     @GetMapping("/posts/{postId}/memberships")
-    public Page<MembershipResource> getAllMembershipsByProviderId(
-            @PathVariable(name = "postId") Long postId,
-            Pageable pageable) {
-        Page<Membership> membershipPage = membershipService.getAllMembershipsByProviderId(postId, pageable);
-        List<MembershipResource> resources = membershipPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-        return new PageImpl<>(resources, pageable, resources.size());
+    public List<MembershipResource> getAllMembershipsByProviderId(
+            @PathVariable(name = "postId") Long postId) {
+        return membershipService.getAllMembershipsByProviderId(postId).stream().map(this::convertToResource).collect(Collectors.toList());
+
     }
 
     @GetMapping("/posts/{postId}/memberships/{membershipId}")

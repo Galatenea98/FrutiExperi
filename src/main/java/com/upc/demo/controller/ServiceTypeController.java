@@ -27,13 +27,9 @@ public class ServiceTypeController {
     private ServiceTypeService serviceTypeService;
 
     @GetMapping("/serviceTypes")
-    public Page<ServiceTypeResource> getAllServiceTypes(
-            @Parameter(description="Pageable Parameter")
-                    Pageable pageable) {
-        Page<ServiceType> serviceTypesPage = serviceTypeService.getAllServiceTypes(pageable);
-        List<ServiceTypeResource> resources = serviceTypesPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
+    public List<ServiceTypeResource> getAllServiceTypes() {
 
-        return new PageImpl<>(resources, pageable, resources.size());
+        return serviceTypeService.getAllServiceTypes().stream().map(this::convertToResource).collect(Collectors.toList());
     }
 
     @GetMapping("/serviceTypes/{id}")

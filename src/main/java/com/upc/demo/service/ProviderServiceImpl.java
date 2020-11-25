@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProviderServiceImpl implements ProviderService {
     @Autowired
@@ -41,7 +43,7 @@ public class ProviderServiceImpl implements ProviderService {
     }
 
     @Override
-    public Page<Provider> getAllProviders(Pageable pageable) {
-        return providerRepository.findAll(pageable);
+    public List<Provider> getAllProviders() {
+        return providerRepository.findAll();
     }
 }

@@ -9,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ServiceServiceImpl implements ServiceService {
     @Autowired
@@ -41,7 +43,7 @@ public class ServiceServiceImpl implements ServiceService {
     }
 
     @Override
-    public Page<com.upc.demo.domain.model.Service> getAllServices(Pageable pageable) {
-        return serviceRepository.findAll(pageable);
+    public List<com.upc.demo.domain.model.Service> getAllServices() {
+        return serviceRepository.findAll();
     }
 }

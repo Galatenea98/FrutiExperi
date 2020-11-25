@@ -24,13 +24,10 @@ public class ReservationController {
     @Autowired
     private ReservationService recommendationService;
 
-    @GetMapping("/services/{serviceId}/recommendations")
-    public Page<ReservationResource> getAllReservationsByServiceId(
-            @PathVariable(name = "serviceId") Long serviceId,
-            Pageable pageable) {
-        Page<Reservation> recommendationPage = recommendationService.getAllReservationsByServiceId(serviceId, pageable);
-        List<ReservationResource> resources = recommendationPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
-        return new PageImpl<>(resources, pageable, resources.size());
+   /* @GetMapping("/services/{serviceId}/recommendations")
+    public List<ReservationResource> getAllReservationsByServiceId(
+            @PathVariable(name = "serviceId") Long serviceId) {
+        return recommendationService.getAllReservationsByServiceId(serviceId).stream().map(this::convertToResource).collect(Collectors.toList());
     }
 
     @GetMapping("/services/{serviceId}/recommendations/{recommendationId}")
@@ -65,5 +62,5 @@ public class ReservationController {
 
     private ReservationResource convertToResource(Reservation entity) {
         return mapper.map(entity, ReservationResource.class);
-    }
+    }*/
 }

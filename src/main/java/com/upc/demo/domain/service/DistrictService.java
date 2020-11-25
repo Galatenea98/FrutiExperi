@@ -5,10 +5,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 public interface DistrictService {
     ResponseEntity<?> deleteDistrict(Long districtId);
     District updateDistrict(Long districtId, District districtRequest);
     District createDistrict(District district);
     District getDistrictById(Long districtId);
-    Page<District> getAllDistricts(Pageable pageable);
+    List<District> getAllDistricts();
 }
