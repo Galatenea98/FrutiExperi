@@ -23,17 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40cd802a-8079-4b1e-9e1a-35ec2a9c81a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/MembershipPaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/MembershipPayment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/repository/MembershipPaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/service/MembershipPaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/resource/MembershipPaymentResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/resource/saving/SaveMembershipPaymentResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/service/MembershipPaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/MembershipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/MembershipController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Provider.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +50,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\Yvan\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+        <option name="mavenHome" value="$USER_HOME$/.m2/wrapper/dists/apache-maven-3.6.3-bin/1iopthnavndlasol9gbrbg6bf2/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -94,17 +87,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.upc.demo.DemoApplication" />
@@ -137,6 +119,7 @@
       <workItem from="1606231229890" duration="1102000" />
       <workItem from="1606235726295" duration="2510000" />
       <workItem from="1606238527658" duration="5041000" />
+      <workItem from="1606337303000" duration="329000" />
     </task>
     <servers />
   </component>
@@ -160,6 +143,10 @@
       <screen x="0" y="0" width="1876" height="1080" />
     </state>
     <state x="424" y="0" key="#Auto_Import/0.0.1876.1080@0.0.1876.1080" timestamp="1606153076244" />
+    <state x="443" y="102" width="1024" height="844" key="#Project_Structure" timestamp="1606337316829">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="443" y="102" width="1024" height="844" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1606337316829" />
     <state x="406" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606163667782">
       <screen x="0" y="0" width="1885" height="1080" />
     </state>
@@ -188,38 +175,46 @@
       <screen x="0" y="0" width="1876" height="1080" />
     </state>
     <state x="668" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1876.1080@0.0.1876.1080" timestamp="1606154069040" />
-    <state width="1837" height="413" key="GridCell.Tab.0.bottom" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.0.bottom" timestamp="1606337604710">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.0.bottom/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
-    <state width="1837" height="413" key="GridCell.Tab.0.center" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604710" />
+    <state width="1872" height="385" key="GridCell.Tab.0.center" timestamp="1606337604709">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.0.center/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
-    <state width="1837" height="413" key="GridCell.Tab.0.left" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604709" />
+    <state width="1872" height="385" key="GridCell.Tab.0.left" timestamp="1606337604708">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.0.left/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
-    <state width="1837" height="413" key="GridCell.Tab.0.right" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604708" />
+    <state width="1872" height="385" key="GridCell.Tab.0.right" timestamp="1606337604709">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.0.right/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
-    <state width="1837" height="413" key="GridCell.Tab.1.bottom" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604709" />
+    <state width="1872" height="385" key="GridCell.Tab.1.bottom" timestamp="1606337604711">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.1.bottom/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
-    <state width="1837" height="413" key="GridCell.Tab.1.center" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604711" />
+    <state width="1872" height="385" key="GridCell.Tab.1.center" timestamp="1606337604710">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.1.center/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
-    <state width="1837" height="413" key="GridCell.Tab.1.left" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604710" />
+    <state width="1872" height="385" key="GridCell.Tab.1.left" timestamp="1606337604710">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.1.left/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
-    <state width="1837" height="413" key="GridCell.Tab.1.right" timestamp="1606232340503">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state width="1872" height="385" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604710" />
+    <state width="1872" height="385" key="GridCell.Tab.1.right" timestamp="1606337604711">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1837" height="413" key="GridCell.Tab.1.right/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
+    <state width="1872" height="385" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604711" />
     <state x="699" y="203" key="SettingsEditor" timestamp="1606240299424">
       <screen x="0" y="0" width="1880" height="1080" />
     </state>
