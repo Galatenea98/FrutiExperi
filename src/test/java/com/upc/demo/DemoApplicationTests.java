@@ -73,8 +73,8 @@ class DemoApplicationTests {
         @Disabled
         void TestListarCards()
         {
-            List<Card> Expected = TSI.getAll();
-            Assertions.assertSame(Expected, TSI.getAll());
+            //List<Card> Expected = TSI.getAll();
+            //Assertions.assertSame(Expected, TSI.getAll());
         }
         @Test
          void TestNuevaReservation() {
