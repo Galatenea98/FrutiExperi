@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Builder
-public class Provider extends User {
+public class Provider  {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)

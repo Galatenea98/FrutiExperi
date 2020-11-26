@@ -24,7 +24,7 @@ public class ReservationController {
     @Autowired
     private ReservationService recommendationService;
 
-    @GetMapping("/services/{serviceId}/recommendations")
+   /* @GetMapping("/services/{serviceId}/recommendations")
     public List<ReservationResource> getAllReservationsByServiceId(
             @PathVariable(name = "serviceId") Long serviceId) {
         return recommendationService.getAllReservationsByServiceId(serviceId).stream().map(this::convertToResource).collect(Collectors.toList());
@@ -62,5 +62,5 @@ public class ReservationController {
 
     private ReservationResource convertToResource(Reservation entity) {
         return mapper.map(entity, ReservationResource.class);
-    }
+    }*/
 }
