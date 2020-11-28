@@ -71,8 +71,8 @@ class DemoApplicationTests {
             } finally {
                 Assert.isTrue(true,"Eliminacion Correcta");
             }
-            ;
- //           Assert.state(false, "Eliminacion Fallida");
+         
+                Assert.state(false, "Eliminacion Fallida");
         }
 
         @Test
