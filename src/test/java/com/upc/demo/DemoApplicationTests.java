@@ -84,7 +84,7 @@ class DemoApplicationTests {
         }
         @Test
         void TestNuevaReservation() {
-   //         Assertions.assertSame(RSI.createReservation((long) 1,reserva );
+            Assertions.assertSame(RSI.createReservation((long) 1,reserva ));
         }
 
         @Test
