@@ -23,10 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40cd802a-8079-4b1e-9e1a-35ec2a9c81a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/CardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/model/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/repository/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/domain/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/demo/service/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/demo/service/CardServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +75,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/upc/demo/resource/saving" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/2020-1/Diseño y Patrones de Software/blogging" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -87,6 +88,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.upc.demo.DemoApplication" />
@@ -120,6 +132,9 @@
       <workItem from="1606235726295" duration="2510000" />
       <workItem from="1606238527658" duration="5041000" />
       <workItem from="1606337303000" duration="329000" />
+      <workItem from="1606519292727" duration="314000" />
+      <workItem from="1606519668989" duration="34000" />
+      <workItem from="1606519908823" duration="3880000" />
     </task>
     <servers />
   </component>
@@ -152,12 +167,13 @@
     </state>
     <state x="406" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1885.1080/0.0.1885.1080@0.0.1885.1080" timestamp="1606163667782" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606145336705" />
-    <state x="1188" y="250" key="#com.intellij.ide.util.MemberChooser" timestamp="1606240868457">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state x="1213" y="244" key="#com.intellij.ide.util.MemberChooser" timestamp="1606521808089">
+      <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="1188" y="250" key="#com.intellij.ide.util.MemberChooser/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606240868457" />
     <state x="1191" y="250" key="#com.intellij.ide.util.MemberChooser/-1920.0.1885.1080/0.0.1885.1080@0.0.1885.1080" timestamp="1606163578506" />
     <state x="1185" y="250" key="#com.intellij.ide.util.MemberChooser/0.0.1876.1080@0.0.1876.1080" timestamp="1606160323596" />
+    <state x="1213" y="244" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1054@0.0.1920.1054" timestamp="1606521808089" />
     <state x="689" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606145315843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -175,6 +191,10 @@
       <screen x="0" y="0" width="1876" height="1080" />
     </state>
     <state x="668" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1876.1080@0.0.1876.1080" timestamp="1606154069040" />
+    <state x="1223" y="285" width="424" height="483" key="FileChooserDialogImpl" timestamp="1606521435669">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="1223" y="285" width="424" height="483" key="FileChooserDialogImpl/0.0.1920.1054@0.0.1920.1054" timestamp="1606521435669" />
     <state width="1872" height="385" key="GridCell.Tab.0.bottom" timestamp="1606337604710">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -215,12 +235,13 @@
     </state>
     <state width="1837" height="413" key="GridCell.Tab.1.right/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606232340503" />
     <state width="1872" height="385" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1606337604711" />
-    <state x="699" y="203" key="SettingsEditor" timestamp="1606240299424">
-      <screen x="0" y="0" width="1880" height="1080" />
+    <state x="791" y="268" key="SettingsEditor" timestamp="1606522042513">
+      <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="699" y="203" key="SettingsEditor/-1920.0.1880.1080/0.0.1880.1080@0.0.1880.1080" timestamp="1606240299424" />
     <state x="698" y="203" key="SettingsEditor/0.0.1876.1080@0.0.1876.1080" timestamp="1606158841406" />
     <state x="714" y="195" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606145666869" />
+    <state x="791" y="268" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1606522042513" />
     <state x="1145" y="372" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1606153409143">
       <screen x="0" y="0" width="1876" height="1080" />
     </state>
